@@ -1,0 +1,11 @@
+<ul class="list-group">
+    <li *ngFor="let item of items" class="list-group-item d-flex justify-content-between">
+        <div class="d-flex">
+            <img src="../../../assets/img/{{ item.img }}" alt="">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>{{ item.name }}, Quantity: {{ item.qty }}</p>
+        </div>
+        <button class="btn btn-primary" (click)="removeItem($event, item.name)">Remove</button>
+    </li>
+</ul>
